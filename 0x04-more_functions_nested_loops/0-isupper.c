@@ -1,18 +1,24 @@
 #include "holberton.h"
-#include <stdio.h>
-
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _isupper - Checked if a character is a upper character
+ * @c: Value in ascii to be cheke
+ * Return: (1) if c is upper (0) otherwise
  */
-int main(void)
-{
-	char c;
 
-	c = 'A';
-	printf("%c: %d\n", c, _isupper(c));
-	c = 'a';
-	printf("%c: %d\n", c, _isupper(c));
-	return (0);
+int _isupper(int c)
+{
+	int upper, i;
+
+	i = 65;
+	while (i <= 90)
+	{
+		if (c == i)
+		{
+			upper = 1;
+			break;
+		}
+		upper = 0;
+		i++;
+	}
+	return (upper);
 }
